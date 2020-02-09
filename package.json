@@ -1,0 +1,27 @@
+{
+  "name": "Portfolio-Liu",
+  "version": "1.0.0",
+  "description": "My Portfolio Web Site, created with React and Next",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiuZiMing1104/Portfolio-Liu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LiuZiMing1104/Portfolio-Liu/issues"
+  },
+  "homepage": "https://github.com/LiuZiMing1104/Portfolio-Liu#readme",
+  "dependencies": {
+    "next": "^9.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
