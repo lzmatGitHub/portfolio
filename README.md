@@ -40,3 +40,14 @@ npm run dev
   > toShow.js & shows/[id].js
 
 - database : Node-SQLite (codecademy)
+
+- [CSS in Js](https://github.com/MicheleBertoli/css-in-js) styling :  
+
+  - <style jsx>{``}</style>
+    CSS rules have no effect on elements inside of a child component.
+
+  - <style jsx global>{``}</style>
+
+    Global css : changing child component's style
+
+    >  react-markdown example : blog/[id].js
