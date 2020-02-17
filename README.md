@@ -3,6 +3,12 @@ My Portfolio Web Site, created with React and Next
 
 
 
+ ### Sample
+
+https://github.com/zeit/next-learn-demo
+
+
+
 ### Start the server
 
 npm run dev
@@ -47,7 +53,6 @@ npm run dev
     CSS rules have no effect on elements inside of a child component.
 
   - <style jsx global>{``}</style>
-
-    Global css : changing child component's style
-
-    >  react-markdown example : blog/[id].js
+Global css : changing child component's style
+    
+>  react-markdown example : blog/[id].js
