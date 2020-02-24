@@ -1,4 +1,4 @@
-import IndexLayout from '../components/layout/IndexLayout';
+import IndexLayout from '../components/Layout/IndexLayout';
 import Link from 'next/link';
 
 export default function Blog() {
