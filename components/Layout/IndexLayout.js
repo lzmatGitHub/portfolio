@@ -5,74 +5,74 @@ class IndexLayout extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            pageName: "Index Page",
+            pageName: "Liu's Portfolio Site",
             buttons: [
                 {
-                    name: "01",
+                    name: "自己紹介",
                     rowspan: 2,
                     colspan: 1,
-                    backgroundColor: "#db2828",
-                    key: 1
+                    key: 1,
+                    link:"/self-introduction"
                 }, {
-                    name: "02",
+                    name: "",
                     rowspan: 1,
                     colspan: 1,
-                    backgroundColor: "#f2711c",
-                    key: 2
+                    key: 2,
+                    link:""
                 }, {
-                    name: "03",
+                    name: "",
                     rowspan: 1,
                     colspan: 2,
-                    backgroundColor: "#fbbd08",
-                    key: 3
+                    key: 3,
+                    link:""
                 }, {
-                    name: "04",
+                    name: "",
                     rowspan: 1,
                     colspan: 2,
-                    backgroundColor: "#b5cc18",
-                    key: 4
+                    key: 4,
+                    link:""
                 }, {
-                    name: "05",
+                    name: "",
                     rowspan: 1,
                     colspan: 1,
-                    backgroundColor: "#21ba45",
-                    key: 5
+                    key: 5,
+                    link:""
                 }, {
-                    name: "06",
+                    name: "",
                     rowspan: 1,
                     colspan: 1,
-                    backgroundColor: "#00b5ad",
-                    key: 6
+                    key: 6,
+                    link:""
                 }, {
-                    name: "07",
+                    name: "",
                     rowspan: 2,
                     colspan: 1,
-                    backgroundColor: "#2185d0",
-                    key: 7
+                    key: 7,
+                    link:""
                 }, {
-                    name: "08",
+                    name: "",
                     rowspan: 1,
                     colspan: 1,
-                    backgroundColor: "#6435c9",
-                    key: 8
+                    key: 8,
+                    link:""
                 }, {
-                    name: "09",
+                    name: "",
                     rowspan: 1,
                     colspan: 1,
-                    backgroundColor: "#a333c8",
-                    key: 9
+                    key: 9,
+                    link:""
                 }, {
-                    name: "10",
+                    name: "",
                     rowspan: 1,
                     colspan: 1,
-                    backgroundColor: "#e03997",
-                    key: 10
+                    key: 10,
+                    link:""
                 }, {
-                    name: "11",
+                    name: "",
                     rowspan: 1,
                     colspan: 2,
-                    backgroundColor: "#a5673f",
-                    key: 11
+                    key: 11,
+                    link:""
                 }
                 /*
                 , {
@@ -100,8 +100,8 @@ class IndexLayout extends React.Component {
                 <IndexButtons buttons={this.state.buttons}/>
                 <style jsx>{` 
                         h1 {
-                            font-size: 24px;
-                            font-family: Arial;
+                            font-size: 36px;
+                            font-family: Comic Sans MS;
                         }
                         .index-layout {
                             position: absolute;
