@@ -90,11 +90,13 @@ class IndexLayout extends React.Component {
                 }
                 */
             ],
-            backgroundImage: "/images/background-1.png"
+            backgroundImage: require('../../images/background-1.png')
         }
     }
 
     render() {
+        console.log(this.state.backgroundImage);
+        console.log(typeof this.state.backgroundImage);
         return (
             <div className="index-layout">
                 <h1>{this.state.pageName}</h1>
@@ -102,6 +104,7 @@ class IndexLayout extends React.Component {
                 <style jsx>{` 
                         h1 {
                             font-size: 36px;
+                            padding-left: 24px;
                             font-family: Comic Sans MS;
                         }
                         .index-layout {
@@ -111,6 +114,7 @@ class IndexLayout extends React.Component {
                             width: 96%;
                             height: 100%;
                             background-image: url(${this.state.backgroundImage});
+                            background-size: cover;
                         }
                       `}</style>
             </div>
