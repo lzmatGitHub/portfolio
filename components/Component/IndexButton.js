@@ -1,31 +1,23 @@
 import React from 'react';
-import IndexButton from './IndexButton';
+import Link from 'next/link';
 
-class IndexButtons extends React.Component {
+class IndexButton extends React.Component {
     render() {
         return (
-            <div className="grid-buttons-container">
-                {this
-                    .props
-                    .buttons
-                    .map((button) => <IndexButton button={button}  key={button.key}/>)}
-                <style jsx>{` 
-                        .grid-buttons-container {
-                            width: 50%;
-                            height: 70%;
-                            position: absolute;
-                            right: 15%;
-                            bottom: 10%;
-                            display: grid;
-                            grid-template-rows: repeat(4, 1fr);
-                            grid-template-columns: repeat(4, 1fr);
-                            border: solid 1px black;
-                        }
-                        .grid-buttons-container > div {
+            <div className={this.props.button.link == "" ? "" : "grid-button"} style={{
+                backgroundColor: this.props.button.backgroundColor,
+                gridRow: `auto / span ${this.props.button.rowspan}`,
+                gridColumn: `auto / span ${this.props.button.colspan}` }} id={`button${this.props.button.key}`}>
+                <Link href={this.props.button.link}>
+                    <a>{this.props.button.name}</a>
+                </Link>
+                <style jsx>
+                    {`
+                        div {
                             background-color: darkgray;
                             border: solid 1px black;
                         }
-                        .grid-buttons-container > div.grid-button {
+                        .grid-button {
                             color: #fff;
                             font-size: 16px;
                             font-weight: bold;
@@ -56,10 +48,11 @@ class IndexButtons extends React.Component {
                                 bottom: 10%;
                             }
                         }
-                `}</style>
+                    `}
+                </style>
             </div>
         );
     }
 }
 
-export default IndexButtons;
+export default IndexButton;

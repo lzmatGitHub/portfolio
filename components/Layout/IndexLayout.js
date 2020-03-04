@@ -89,7 +89,8 @@ class IndexLayout extends React.Component {
                     key: 13
                 }
                 */
-            ]
+            ],
+            backgroundImage: "/images/background-1.png"
         }
     }
 
@@ -109,6 +110,7 @@ class IndexLayout extends React.Component {
                             left: 2%;
                             width: 96%;
                             height: 100%;
+                            background-image: url(${this.state.backgroundImage});
                         }
                       `}</style>
             </div>
