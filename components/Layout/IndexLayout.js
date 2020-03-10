@@ -90,17 +90,21 @@ class IndexLayout extends React.Component {
                 }
                 */
             ],
-            backgroundImage: require('../../images/background-1.png')
+            backgroundImage: "index"
         }
+        this.changeBackgroundIMG = this.changeBackgroundIMG.bind(this);
+    }
+
+    changeBackgroundIMG(key) {
+        this.setState({backgroundImage: key});
     }
 
     render() {
-        console.log(this.state.backgroundImage);
-        console.log(typeof this.state.backgroundImage);
+
         return (
             <div className="index-layout">
                 <h1>{this.state.pageName}</h1>
-                <IndexButtons buttons={this.state.buttons}/>
+                <IndexButtons buttons={this.state.buttons} handleHover={this.changeBackgroundIMG} />
                 <style jsx>{` 
                         h1 {
                             font-size: 36px;
@@ -110,11 +114,18 @@ class IndexLayout extends React.Component {
                         .index-layout {
                             position: absolute;
                             top: 0;
-                            left: 2%;
-                            width: 96%;
+                            left: 0;
+                            width: 100%;
                             height: 100%;
-                            background-image: url(${this.state.backgroundImage});
+                            background-image: url(${require('../../images/background-' + this.state.backgroundImage + '.png')});
                             background-size: cover;
+                            transition-duration: 0.2s;
+                        }
+
+                        @media screen and (max-width: 1024px) {
+                            h1 {
+                                font-size: 24px;
+                            }
                         }
                       `}</style>
             </div>

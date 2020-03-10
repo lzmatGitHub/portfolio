@@ -2,13 +2,14 @@ import React from 'react';
 import IndexButton from './IndexButton';
 
 class IndexButtons extends React.Component {
+
     render() {
         return (
             <div className="grid-buttons-container">
                 {this
                     .props
                     .buttons
-                    .map((button) => <IndexButton button={button}  key={button.key}/>)}
+                    .map((button) => <IndexButton button={button}  key={button.key} handleHover={this.props.handleHover} />)}
                 <style jsx>{` 
                         .grid-buttons-container {
                             width: 50%;
@@ -21,34 +22,7 @@ class IndexButtons extends React.Component {
                             grid-template-columns: repeat(4, 1fr);
                             border: solid 1px black;
                         }
-                        .grid-buttons-container > div {
-                            background-color: darkgray;
-                            border: solid 1px black;
-                        }
-                        .grid-buttons-container > div.grid-button {
-                            color: #fff;
-                            font-size: 16px;
-                            font-weight: bold;
-                            position: relative;
-                            transition-duration: 0.2s;
-                            background-color: white;
-                        }
-                        .grid-button a {
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            text-decoration: none;
-                            color: black;
-                            text-align: center;
-                        }
-                        .grid-button:hover {
-                            opacity: 0.3;
-                            cursor: pointer;
-                        }
-                        .grid-button:active {
-                            opacity: 0.7;
-                        }
+                        
                         @media screen and (max-width: 1024px) {
                             .grid-buttons-container {
                                 width: 80%;
