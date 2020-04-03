@@ -16,10 +16,6 @@ class IndexLayout extends React.Component {
         this.setState({backgroundImage: key});
     }
 
-    componentDidMount() {
-        console.log(this.props.indexbuttons);
-    }
-
     render() {
 
         return (
