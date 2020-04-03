@@ -7,7 +7,7 @@ function fetcher(url) {
 }
 
 export default function Index() {
-    const { data, error } = useSWR('/api/index_button', fetcher);
+    const { data, error } = useSWR('api/index_button', fetcher);
     if (data) {
         return (
             <div>
