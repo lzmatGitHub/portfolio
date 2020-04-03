@@ -7,12 +7,19 @@ function fetcher(url) {
 }
 
 export default function Index() {
-    const { data, error } = useSWR('/api/cards', fetcher);
-    console.log(data);
-    return (
-        <div>
-            <HeadConfig title="劉のポートフォリオサイト" description="React.jsとNext.jsで作成したポートフォリオサイト"/>
-            <IndexLayout/>
-        </div>
-    );
+    const { data, error } = useSWR('/api/index_button', fetcher);
+    if (data) {
+        return (
+            <div>
+                <HeadConfig title="劉のポートフォリオサイト" description="React.jsとNext.jsで作成したポートフォリオサイト"/>
+                <IndexLayout indexbuttons={data} />
+            </div>
+        );
+    } else {
+        return (
+            <div>
+                <HeadConfig title="劉のポートフォリオサイト" description="React.jsとNext.jsで作成したポートフォリオサイト"/>
+            </div>
+        );
+    }
 }

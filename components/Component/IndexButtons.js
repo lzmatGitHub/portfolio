@@ -12,22 +12,32 @@ class IndexButtons extends React.Component {
                     .map((button) => <IndexButton button={button}  key={button.key} handleHover={this.props.handleHover} />)}
                 <style jsx>{` 
                         .grid-buttons-container {
-                            width: 50%;
-                            height: 70%;
+                            width: 600px;
+                            height: 600px;
                             position: absolute;
                             right: 15%;
                             bottom: 10%;
                             display: grid;
-                            grid-template-rows: repeat(4, 1fr);
-                            grid-template-columns: repeat(4, 1fr);
+                            grid-template-rows: repeat(3, 1fr);
+                            grid-template-columns: repeat(3, 1fr);
                             border: solid 1px black;
                         }
                         
                         @media screen and (max-width: 1024px) {
                             .grid-buttons-container {
-                                width: 80%;
-                                right: 10%;
-                                bottom: 10%;
+                                width: 540px;
+                                height: 540px;
+                                right: 5%;
+                                bottom: 15%;
+                            }
+                        }
+
+                        @media screen and (max-width: 600px) {
+                            .grid-buttons-container {
+                                width: 300px;
+                                height: 300px;
+                                right: 2.5%;
+                                bottom: 20%;
                             }
                         }
                 `}</style>
