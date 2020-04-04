@@ -1,13 +1,12 @@
 import HeadConfig from '../components/Component/HeadConfig';
 import IndexLayout from '../components/Layout/IndexLayout';
-import useSWR from 'swr';
-
-function fetcher(url) {
-    return fetch(url).then(r => r.json());
-}
+import data from '../data/index_button.json';
 
 export default function Index() {
-    const { data, error } = useSWR('api/index_button', fetcher);
+
+    console.log('json file');
+    console.log(data);
+
     if (data) {
         return (
             <div>
